@@ -1,12 +1,11 @@
 //Columnar Transposition
 
-#include &lt;iostream&gt;
+#include iostream;
+#include stdio.h;
 
-#include&lt;stdio.h&gt;
+#include string.h;
 
-#include&lt;string.h&gt;
-
-#include&lt;ctype.h&gt;
+#include ctype.h;
 
 using namespace std;
 
@@ -16,15 +15,15 @@ void encrypt()
 
 char str[100];
 
-cout &lt;&lt; &quot;\nEnter plain text&quot;;
+cout<<"Enter plain text";
 
-cin &gt;&gt; str;
+cin>>&gt;&gt; str;
 
 char key[100],backup[100];
 
-cout &lt;&lt; &quot;\nEnter key&quot;;
+cout<<"\nEnter key";
 
-cin &gt;&gt; key;
+cin>>key;
 
 strcpy_s(backup, key);
 
@@ -32,7 +31,7 @@ int s = strlen(str);
 
 int k = strlen(key);
 
-cout &lt;&lt; &quot;Length of plain text = &quot; &lt;&lt; s &lt;&lt; endl &lt;&lt; &quot;Length of key = &quot; &lt;&lt; k;
+cout<<"Length of plain text = "<<s<<endl<<"Length of key = "<<k;
 
 int offset = s%k;
 
@@ -52,7 +51,7 @@ strcat_s(str,&quot;x&quot;);
 
 }
 
-cout &lt;&lt; endl &lt;&lt; str &lt;&lt; endl;
+cout<<endl<<str<<endl;
 
 s = strlen(str);
 
@@ -76,7 +75,7 @@ for (int j = 0; j &lt; k; j++)
 
 temp[i][j] = str[z++];
 
-cout &lt;&lt; temp[i][j];
+cout<<temp[i][j];
 
 }
 
@@ -144,13 +143,13 @@ j = j + 1;
 
 }
 
-cout &lt;&lt; &quot;\nThe pattern in which the text has to be encrypted is as follows: &quot;;
+cout<<"\nThe pattern in which the text has to be encrypted is as follows";
 
 for (int i = 0; i&lt;k; i++)
 
-cout &lt;&lt; pattern[i] &lt;&lt; &quot; &quot;;
+cout<<pattern[i]<<" ";
 
-cout &lt;&lt; &quot;\n&quot;;
+cout<<"\n";
 
 
 
@@ -172,7 +171,7 @@ cipher[i][j] = temp[j][pattern[i]];
 
 }
 
-cout &lt;&lt; endl &lt;&lt; &quot;Encrypted Text\n&quot;;
+cout<<endl <<"Encrypted Text\n";
 
 for (int i = 0; i &lt;k; i++)
 
@@ -180,13 +179,13 @@ for (int i = 0; i &lt;k; i++)
 
 for (int j = 0; j &lt; row; j++)
 
-cout &lt;&lt; cipher[i][j];
+cout<<cipher[i][j];
 
 }
 
 
 
-cout &lt;&lt; endl;
+cout<<endl;
 
 }
 
@@ -200,15 +199,15 @@ int k, c, m;
 
 //key
 
-cout &lt;&lt; &quot;\nEnter the key length &quot;;
+cout<<"\nEnter the key length";
 
-cin &gt;&gt; k;
+cin>>k;
 
-cout &lt;&lt; &quot;\nEnter the key &quot;;
+cout"\nEnter the key";
 
 for (int i = 0; i&lt;k; i++)
 
-cin &gt;&gt; key[i];
+cin>>key[i];
 
 for (int i = 0; i&lt;k; i++)
 
@@ -216,33 +215,31 @@ backup[i] = key[i];
 
 //cipher
 
-cout &lt;&lt; &quot;\nEnter the cipher text length &quot;;
+cout<<"\nEnter the cipher text length ";
 
-cin &gt;&gt; c;
+cin>>c;
 
 m = c / k;
-
-cout &lt;&lt; &quot;\nEnter the cipher text without spaces\n&quot;;
+cout<<"\nEnter the cipher text without spaces\n";
 
 for (int j = 0; j&lt;k; j++)
 
 for (int i = 0; i&lt;m; i++)
 
-cin &gt;&gt; cipher[i][j];
+cin>>cipher[i][j];
 
-cout &lt;&lt; &quot;\nThe cipher text entered is as follows : &quot;;
-
+cout<<"\nThe cipher text entered is as follows : ";
+  
 for (int i = 0; i&lt;m; i++)
 
 {
-
-cout &lt;&lt; &quot;\n&quot;;
+cout<<endl;
 
 for (int j = 0; j&lt;k; j++)
 
 {
 
-cout &lt;&lt; cipher[i][j] &lt;&lt; &quot; &quot;;
+cout<<cipher[i][j]<<" ";
 
 }
 
@@ -278,13 +275,13 @@ key[j] = t;
 
 }
 
-cout &lt;&lt; &quot;\nThe sorted key is: &quot;;
+cout<<"\nThe sorted key is:";
 
 for (int i = 0; i&lt;k; i++)
 
-cout &lt;&lt; key[i];
+cout<<key[i];
 
-cout &lt;&lt; &quot;\n&quot;;
+cout<<endl;
 
 //finding the pattern of decryption
 
@@ -318,13 +315,13 @@ j = j + 1;
 
 }
 
-cout &lt;&lt; &quot;\nThe pattern in which the text has to be decrypted is as follows: &quot;;
+cout<<"\nThe pattern in which the text has to be decrypted is as follows:";
 
 for (i = 0; i&lt;k; i++)
 
-cout &lt;&lt; pattern[i] &lt;&lt; &quot; &quot;;
+cout<<pattern[i]<<" ";
 
-cout &lt;&lt; &quot;\n&quot;;
+cout<<endl;
 
 //rearranging the cipher matrix according to pattern
 
@@ -364,7 +361,7 @@ cout&lt;&lt;cback[i][j]&lt;&lt;&quot; &quot;;
 
 */
 
-cout &lt;&lt; &quot;\nThe plain text without spaces is as follows:\n &quot;;
+cout<<"\nThe plain text without spaces is as follows:\n";
 
 for (i = 0; i&lt;m; i++)
 
@@ -382,13 +379,13 @@ int x;
 
 lbl:
 
-cout &lt;&lt; &quot;\nMultiple Columnar Transposition&quot;;
+cout<<"\nMultiple Columnar Transposition";
 
-cout &lt;&lt; &quot;\nPlease enter your choice &quot;;
+cout<<"\nPlease enter your choice";;
 
-cout &lt;&lt; &quot;\n1.Encrpyt\n2.Decrypt\n3.Exit&quot;;
+cout<<"\n1.Encrpyt\n2.Decrypt\n3.Exit";
 
-cin &gt;&gt; x;
+cin>>x;
 
 switch (x)
 
@@ -404,7 +401,7 @@ break;
 
 case 3: exit(0);
 
-default: cout &lt;&lt; &quot;\nInvalid input!&quot;;
+default: cout<<"\nInvalid input!";
 
 }
 
